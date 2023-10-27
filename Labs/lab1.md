@@ -12,11 +12,10 @@
 
 1. On the OpenAI Overview (1) page and right-click on Go to Azure OpenAI Studio (2) button and click on Open link a new tab.
 
-   ![](./Media/image-rg-(3).png)
+   ![](./Media/image-rg-03.png) 
    
 1. When Pick an account window prompted kindly select your account to sign-in.
  
-
 1. In the Azure AI Studio, select Deployments (1) under Management section.
    ![](./Media/image-rg-6.png)
 
@@ -102,6 +101,8 @@
 
 1. Copy the values which you recorded into .env file and save the file
 
+   ![](./Media/image-rg-24.png)
+
  #### Task 2: Setup .NET secrets
 
 1. Navigate to miyagi/services/recommendation-service/dotnet, right click on dotnet and select **Open in intergate Terminal**.
@@ -134,14 +135,15 @@
 Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step by step details of how the Recommendation Service is implemented. Pay special attention to how RAG pattern is implemented using Semantic Kernel. Select kernel as .NET Interactive in the top right corner of the notebook.
 
 1. In Visual Studio Code navigate to miyagi/sandbox/usecases/rag/dotnet folder and select **Getting-started.ipynb**
+   ![](./Media/image-rg-23.png)
 
-2. Execute the notebook cell by cell (using either Ctrl + Enter to stay on the same cell or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
+3. Execute the notebook cell by cell (using either Ctrl + Enter to stay on the same cell or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
 
 ### 2.5 Run miyagi frontend locally
 
-1. Open a new terminal: Terminal -> New Terminal (or Ctrl + Shift + `)
+1. Open a new terminal: by navigating  miyagi/ui/typescript and right-click on in cascade select **Open in intergate Terminal**.
 
-1. Change folder to miyagi/ui/typescript
+   ![](./Media/image-rg-25.png)
 
 1. Run the following command to install the dependencies
    
@@ -159,9 +161,10 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    ![](./Media/miyagi1.png)
    
 ### 2.6 Run recommendation service locally
-1. Open a new terminal: Terminal -> New Terminal (or Ctrl + Shift + `)
 
-1. Change folder to miyagi/services/recommendation-service/dotnet
+1. Open a new terminal: by navigating miyagi/services/recommendation-service/dotnet and right-click on in cascade select **Open in intergate Terminal**.
+
+    ![](./Media/image-rg-26.png)
 
 1. Run the following command to run the recommendation service locally
     ```
