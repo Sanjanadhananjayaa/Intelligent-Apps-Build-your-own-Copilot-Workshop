@@ -45,9 +45,8 @@
 
  #### Task 2: Setup .NET secrets
 
- 1. Open a new terminal: Terminal -> New Terminal (or Ctrl + Shift + `)
- 2. Change folder to miyagi/services/recommendation-service/dotnet
- 3. Run the following command to set the secrets for the recommendation service. You will need to provide the values for the variables below.
+1. Navigate to miyagi/services/recommendation-service/dotnet, right click on dotnet and select **Open in intergate Terminal**.
+1. Run the following command to set the secrets for the recommendation service. You will need to provide the values for the variables below.
    
      ```
           dotnet user-secrets set "USE_OPEN_AI" "False"
@@ -63,18 +62,13 @@
      ```
    Use the following instructions to get the values for the arguments to the dotnet user-secrets set command
 
-   > **Bing API Key:** This will be provided to you during the workshop.
-
-   > **Open AI Endpoint:** Go to Azure Portal -> Resource Groups -> Select the resource group you created in step 3 of the previous section -> Select the Open AI resource -> Select Keys and Endpoint -> Copy the value of Endpoint.
-
-   > **Open AI API Key:** Go to Azure Portal -> Resource Groups -> Select the resource group you created in step 3 of the previous section -> Select the Open AI resource -> Select Keys and Endpoint -> Copy the value of key1.
-
-   > **Completions model Deployment Id:** Go to Azure Portal -> Resource Groups -> Select the resource group you created in step 3 of the previous section -> Select the Open AI resource -> Overview -> Click Go to Azure OpenAI Studio -> Deployments -> Copy the value of the deployment name for gpt-35-turbo model.
-
-   > **Embeddings model Deployment Id:** Go to Azure Portal -> Resource Groups -> Select the resource group you created in step 3 of the previous section -> Select the Open AI resource -> Overview -> Click Go to Azure OpenAI Studio -> Deployments -> Copy the value of the deployment name for text-embedding-ada-002 model.
-
-   > **Cosmos DB Connection String:** Go to Azure Portal -> Resource Groups -> Select the resource group you created in step 3 of the previous section -> Select the Cosmos DB resource -> Keys -> Copy the value of the Cosmos DB Connection String.
-
+   -  **Bing API Key:** Provide **a6a11817493b4c2cb9a49d11bcd31e98**
+   -  **"deploymentOrModelId"** Replace <Your Open AI Completions model Deployment Id> with deployment name for gpt-35-turbo model
+   -  **"embeddingDeploymentOrModelId"** Replace  <Your Open AI Embeddings model Deployment Id> with deployment name for text-embedding-ada-002
+   -  **Open AI Endpoint: Replace "<Your Open AI Endpoint>" with Open AI Endpoint
+   -  **Open AI API Key:** Replace "<Your Open AI API Key>" with Open AI Key
+   -  **Cosmos DB Connection String:** Go to Azure Portal -> Resource Groups -> miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>  -> Select the cosmos-<inject key="DeploymentID" enableCopy="false"/>  -> Keys  
+      -> Copy the value of the Cosmos DB Connection String.
 
 
 
