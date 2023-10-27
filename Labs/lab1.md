@@ -63,8 +63,17 @@
      ```
    Use the following instructions to get the values for the arguments to the dotnet user-secrets set command
 
+   > **Bing API Key:** This will be provided to you during the workshop.
 
+   > **Open AI Endpoint:** Go to Azure Portal -> Resource Groups -> Select the resource group you created in step 3 of the previous section -> Select the Open AI resource -> Select Keys and Endpoint -> Copy the value of Endpoint.
 
+   > **Open AI API Key:** Go to Azure Portal -> Resource Groups -> Select the resource group you created in step 3 of the previous section -> Select the Open AI resource -> Select Keys and Endpoint -> Copy the value of key1.
+
+   > **Completions model Deployment Id:** Go to Azure Portal -> Resource Groups -> Select the resource group you created in step 3 of the previous section -> Select the Open AI resource -> Overview -> Click Go to Azure OpenAI Studio -> Deployments -> Copy the value of the deployment name for gpt-35-turbo model.
+
+   > **Embeddings model Deployment Id:** Go to Azure Portal -> Resource Groups -> Select the resource group you created in step 3 of the previous section -> Select the Open AI resource -> Overview -> Click Go to Azure OpenAI Studio -> Deployments -> Copy the value of the deployment name for text-embedding-ada-002 model.
+
+   > **Cosmos DB Connection String:** Go to Azure Portal -> Resource Groups -> Select the resource group you created in step 3 of the previous section -> Select the Cosmos DB resource -> Keys -> Copy the value of the Cosmos DB Connection String.
 
 
 
