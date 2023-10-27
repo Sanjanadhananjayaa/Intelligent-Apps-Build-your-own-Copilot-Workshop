@@ -3,44 +3,90 @@
 #### Task 1: Setup configuration for miyagi app
 
 1. In Azure Portal, click on **Resource groups** from the Navigate panel.
+
 1. From the Resource groups page, click on miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>.
+   ![](./Media/image-rg-1.png)
+
 1. On **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**, from the Overview (1) tab select the OpenAIService-<inject key="DeploymentID" enableCopy="false"/> (2).
+   ![](./Media/image-rg-2.png)
+
 1. On the OpenAI Overview (1) page and right-click on Go to Azure OpenAI Studio (2) button and click on Open link a new tab.
-1. When Pick an account prompted please your account.
+
+   ![](./Media/image-rg-(3).png)
+   
+1. When Pick an account window prompted kindly select your account to sign-in.
+ 
+
 1. In the Azure AI Studio, select Deployments (1) under Management section.
+   ![](./Media/image-rg-6.png)
+
 1. On the Deployments blade of Azure AI Studio, select deployment name for gpt-35-turbo model and copy the full deployment name for gpt-35-turbo model.
+   ![](./Media/image-rg-7.png)
+   ![](./Media/image-rg-8.png)
+
 1. Navigative back to **Deployment** page.    
+
 1. On the Deployments blade of Azure AI Studio, select deployment name for text-embedding-ada-002 and copy the full deployment name for text-embedding-ada-002.
+   ![](./Media/image-rg-10.png)
+   ![](./Media/image-rg-11.png)
+
 1. Navigate back to the tab displaying **Azure portal**. 
+
 1. On **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Resource Management** section select **Keys and Endpoint** and copy the **Key1** and **Endpoints** values in notepade you need this values in furter tasks.
+
 1. Navigate back to miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>.
+
 1. On the miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> page, select acs-<inject key="DeploymentID" enableCopy="false"/> from resources list.
+
 1. On acs-<inject key="DeploymentID" enableCopy="false"/> blade copy the url you need this value in furture tasks.
-2. On acs-<inject key="DeploymentID" enableCopy="false"/> blade, under **Settings** section select Keys and copy the Primary Admin Key.
+
+1. On acs-<inject key="DeploymentID" enableCopy="false"/> blade, under **Settings** section select Keys and copy the Primary Admin Key.
+
 1. Navigative back to miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> page, select cosmos-<inject key="DeploymentID" enableCopy="false"/> from resources list.
+
 1. On cosmos-<inject key="DeploymentID" enableCopy="false"/> copy the Name and URL. 
+
 1. Navigate back to miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>, select miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>.
-2. Set your blobServiceUri https://(yourstorageservicename).blob.core.windows.net/
+
+1. Set your blobServiceUri https://(yourstorageservicename).blob.core.windows.net/
 
 1. Within LabVM select Visual Studio Code which is presented on desktop, open it
+
 1. In Visual Studio Code from menu bar select **File**> **Open folder**, and  navigate to C:\LabFiles\miyagi click on **open folder**.
+
 1. In Visual Studio Code if **Do you trust the authors of the files in this folder?** window prompted click **Yes, I trust the authors**.
+
 1. Expand **miyagi**>**ui/typescript** and click on **New file** icon and create a new file called .env.
+
 1. Copy paste the contents of .env.local.example into .env and save the file.
+
 1. Create a new file named appsettings.json in miyagi/services/recommendation-service/dotnet
+
 1. Copy paste the contents of appsettings.json.example into appsettings.json and save the file
+
 1. Update appsettings.json with the values which you recorded in previous steps for the variables below.
+
 1. For "deploymentOrModelId": "<Id of the completions model you deployed>", copy the deployment name for gpt-35-turbo model
-2. For "embeddingDeploymentOrModelId": "<Id of the embedding model you deployed>", deployment name for text-embedding-ada-002
+
+1. For "embeddingDeploymentOrModelId": "<Id of the embedding model you deployed>", deployment name for text-embedding-ada-002
+
 1. For "endpoint": "<Your Open AI Endpoint>", "apiKey": "<Your OpenAI API Key>",  Copy the Key1 to **apiKey** and endpoints to **Endpoint**.
-2. For "azureCognitiveSearchEndpoint": "<Your Cognitive Search Endpoint>", "azureCognitiveSearchApiKey": "<Your Cognitive Search API Key>", copy Url to **azureCognitiveSearchEndpoint** and Key to 
+
+1. For "azureCognitiveSearchEndpoint": "<Your Cognitive Search Endpoint>", "azureCognitiveSearchApiKey": "<Your Cognitive Search API Key>", copy Url to **azureCognitiveSearchEndpoint** and Key to 
    **azureCognitiveSearchApiKey**
+
 1. For "cosmosDbUri": Replace "<Your Cosmos DB URI>" with Cosmos url , replace "cosmosDbName": "miyagi", with cosmos-<inject key="DeploymentID" enableCopy="false"/>
+
 1. For "blobServiceUri": "<Your blobServiceUri>", replace <Your blobServiceUri> with https://miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>.blob.core.windows.net/
+
 1. Leave default settings for  "cosmosDbContainerName": "recommendations","logLevel": "Trace"
+
 1. Once afer updating the values kindly save the file by pressing **CTRL + S**.
+
 1.Create a new file named .env in miyagi/sandbox/usecases/rag/dotnet
+
 1. Copy paste the contents of .env.example into .env and save the file
+
 1. Copy the values which you recorded into .env file and save the file
 
  #### Task 2: Setup .NET secrets
