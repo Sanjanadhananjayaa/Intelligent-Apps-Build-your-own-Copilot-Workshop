@@ -2,36 +2,43 @@
 
 #### Task 1: Setup configuration for miyagi app
 
-1. Within LabVM select Visual Studio Code which is presented on desktop, double click in it to open.
+1. Within the Labvm select Visual Studio Code which is presented on desktop, double click on it to open.
 
    >**Note** If **Join us in making promt-flow extension better!** window prompted please click on **No,thanks**.
+    ![](./Media/image-rg-01.png)
    
-1. In Visual Studio Code from menu bar select **File**> **Open folder**, and  navigate to C:\LabFiles\miyagi click on **open folder**.
+1. In Visual Studio Code from menu bar select **File(1)** **Open folder(2)**,
+    ![](./Media/image-rg-02.png)
 
-1. In Visual Studio Code if **Do you trust the authors of the files in this folder?** window prompted click **Yes, I trust the authors**.
+1. In file explorer navigate to C:\LabFiles\miyagi select **miyagi**(1) click on **open folder(2)**
+
+   ![](./Media/image-rg-003.png)
+
+1. In Visual Studio Code if **Do you trust the authors of the files in this folder?** window prompted click on **Yes, I trust the authors**.
    ![](./Media/image-rg-18.png)
    
 1. Expand **miyagi(1)** >**ui/typescript (2)** and click on **New file (3)** icon and create a new file called **.env. (4)**
-   ![](./Media/image-rg-19.png)
+    ![](./Media/image-rg-19.png)
 
 1. Copy paste the contents of .env.local.example into .env and save the file.
 
    >**Note**: You can find .env.local.example below the .env file
+   
+   ![](./Media/image-rg-04.png)
 
-1. Create a new file named appsettings.json in miyagi/services/recommendation-service/dotnet
+1. Expand **miyagi/services/recommendation-service/dotnet** and click on **New file (3)** icon and create a new file called appsettings.json
+
    ![](./Media/image-rg-20.png)
    
 1. Copy paste the contents of appsettings.json.example into appsettings.json and save the file
 
    >**Note**: You can find appsettings.json.example below the appsettings.json file
+   ![](./Media/image-rg-05.png)
 
 1. Update appsettings.json with the values for the variables below. You can get the values from the Azure Portal.
 
-1. For "deploymentOrModelId": "<Id of the completions model you deployed>", replace <Id of the completions model you deployed> with **miyagi-CompletionModel-<inject key="DeploymentID" enableCopy="false"/>**
-
-1. For "embeddingDeploymentOrModelId":"<Id of the embedding model you deployed>", replace <Id of the embedding model you deployed> with **miyagi-EmbeddingModel-<inject key="DeploymentID" enableCopy="false"/>**
-
-   1. **You can find Deployments name's by following below steps:**
+1. To get deployment modules of "deploymentOrModelId": "<Id of the completions model you deployed>" and "embeddingDeploymentOrModelId":"<Id of the embedding model you deployed>" foolow the below steps:
+   
       - In Azure Portal, click on **Resource groups** from the Navigate panel.
 
       - From the Resource groups page, click on miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>.
@@ -46,20 +53,34 @@
    
        - When Pick an account window prompted kindly select your account to sign-in.
  
-      - In the Azure AI Studio, select Deployments (1) under Management section.
+      - In the Azure AI Studio, select Deployments, under Management section.
         ![](./Media/image-rg-6.png)
 
-      - On the Deployments blade of Azure AI Studio, here you can deployment name for gpt-35-turbo model.
+      - On the Deployments blade of Azure AI Studio, click on gpt-35-turbo model. 
          ![](./Media/image-rg-7.png)
-         ![](./Media/image-rg-8.png)
 
-      - On the Deployments blade of Azure AI Studio, here you can deployment name for text-embedding-ada-002.
+      - Copy full deployment name of gpt-35-turbo modeland enter copied deployment for **"deploymentOrModelId"** in appsettings.json by navigating back to visual studio code.
+        
+          ![](./Media/image-rg-8.png)
+
+        >**Note**: Kindly record deployment name of gpt-35-turbo model values in Notepad you need this values in further tasks.
+      
+      -  Navigate back to deployment page
+
+      - On the Deployments blade of Azure AI Studio, click on text-embedding-ada-002 model. 
+
          ![](./Media/image-rg-10.png)
+
+      - Copy full deployment name of text-embedding-ada-002 model and enter copied deployment for **"embeddingDeploymentOrModelId"** in appsettings.json by navigating back to visual studio code.   
+
          ![](./Media/image-rg-11.png)
+
+      >**Note**: Kindly record the deployments name in notepad you need this values in further tasks.
 
 1. For "endpoint": "<Your Open AI Endpoint>", "apiKey": "<Your OpenAI API Key>", 
 
    **To get "endpoint" and **apiKey** follow the below steps:**
+
    1. Navigate back to the tab displaying **Azure portal**. 
 
    1. On **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Resource Management** section select **Keys and Endpoint**, copy the **Key1** and **Endpoints** in notepad and get back to Visual studio code in appsettings.json file  paste **Key to "apiKey": "<Your OpenAI API Key>", and "endpoints" to "endpoint": "<Your Open AI Endpoint>",
@@ -79,9 +100,14 @@
    1. On acs-<inject key="DeploymentID" enableCopy="false"/> blade copy the URL and get back to Visual studio code and paste URL to **azureCognitiveSearchEndpoint**
    ![](./Media/image-rg-13.png)
 
+      >**Note**: Please record **URL** and paste in notepad you need this values in further tasks.
+
    1. On acs-<inject key="DeploymentID" enableCopy="false"/> blade, under **Settings** section, select **Keys** copy the key and paste to **azureCognitiveSearchApiKey** 
       in visual studio code
-   ![](./Media/image-rg-14.png)
+   
+      ![](./Media/image-rg-14.png)
+
+       >**Note**: Please record **Key** values and paste in notepad you need this values in further tasks.
 
 1. For "cosmosDbUri": Replace "<Your Cosmos DB URI>", "cosmosDbName": "miyagi".
 
@@ -93,8 +119,9 @@
    1. On cosmos-<inject key="DeploymentID" enableCopy="false"/> copy the URL and name
       ![](./Media/image-rg-16.png)
 
-
    1. Get back to visual studio and paste URL to <Your Cosmos DB URI> and Name to cosmosDbName": miyagi.
+
+        >**Note**: Please record **URL** and **Name** values and paste in notepad you need this values in further tasks.
 
 1. For "blobServiceUri": "<Your blobServiceUri>", replace <Your blobServiceUri> with https://miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>.blob.core.windows.net/
 
@@ -110,9 +137,9 @@
 
 1. Copy the values which you recorded into .env file and save the file
 
-   ![](./Media/image-rg-24.png)
+   >**Note**: Please refer the below image to know how to update the values in .env files.
 
-1. For AZURE_COGNITIVE_SEARCH_ENDPOINT="https://<...>.search.windows.net", AZURE_COGNITIVE_SEARCH_API_KEY="<...>", navigate back to resource group 
+   ![](./Media/image-rg-24.png)
 
  #### Task 2: Setup .NET secrets
 
