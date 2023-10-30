@@ -60,10 +60,9 @@
       - In the Azure AI Studio, select Deployments, under Management section.
         ![](./Media/image-rg-6.png)
 
-      - On the Deployments blade of Azure AI Studio, click on gpt-35-turbo model. 
-         ![](./Media/image-rg-7.png)
-
-      - Copy full deployment name of gpt-35-turbo modeland enter copied deployment for **"deploymentOrModelId"** in appsettings.json by navigating back to visual studio code.
+      - On the Deployments blade of Azure AI Studio, click on gpt-35-turbo model model name **(1)** and Copy full deployment name of gpt-35-turbo model **(2)** and enter copied deployment for 
+        **"deploymentOrModelId"** in appsettings.json by navigating back to visual studio code.
+          ![](./Media/image-rg-7.png)
         
           ![](./Media/image-rg-8.png)
 
@@ -71,15 +70,14 @@
       
       -  Navigate back to deployment page
 
-      - On the Deployments blade of Azure AI Studio, click on text-embedding-ada-002 model. 
+      - On the Deployments blade of Azure AI Studio, click on text-embedding-ada-002 model and Copy full deployment name of text-embedding-ada-002 model and enter copied deployment for 
+        **"embeddingDeploymentOrModelId"** in appsettings.json by navigating back to visual studio code.   
 
          ![](./Media/image-rg-10.png)
 
-      - Copy full deployment name of text-embedding-ada-002 model and enter copied deployment for **"embeddingDeploymentOrModelId"** in appsettings.json by navigating back to visual studio code.   
-
          ![](./Media/image-rg-11.png)
 
-      >**Note**: Kindly record the deployments name in notepad you need this values in further tasks.
+      >**Note**: Kindly record the both deployment name's in notepad you need this values in further tasks.
 
 1. For "endpoint" and "apiKey": 
 
