@@ -191,9 +191,79 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    ![](./Media/miyagi2.png)
 
 
+### 2.7 Vectorize and persist embeddings in Azure Cognitive Search
+1. Within LabVm double click on **Postman** to open which is present on desktop
+1. On **Create a free Postman account** provide email and click on **Create free account**.
+1. On **Create Postman account** window, provide following information and click on **Create free account**.
 
+   | **Settings**         | **Values**           | 
+   | -------------------- | -------------------- | 
+   | Email                | <inject key="AzureAdUserEmail"></inject>  | 
+   | Username             | Odluser              |
+   | Password             | Pa55w.rd1234         |
+   | Stay signed in for 30 days | Select the checkbox |
+   
+1. If **This site is trying to open Postman.** window prompted click on **Open**.
+1. On the **Postman** blade select **Workspaces** and select **My Workspace**
 
+   ![](./Media/post2.png)
 
+1. On the **My Workspace** blade, click on **import** 
+
+   ![](./Media/post4.png)
+
+1. In **Drop anywhere to import** window, select **files** and navigate to C:\LabFiles\miyagi\services\recommendation-service\dotnet\setup.
+   ![](./Media/post5.png)
+
+1. In File explorer window Select hydate.postman_collection.json, click on **Open**.
+   ![](./Media/post6.png)
+ 
+1.  Under hydrate -> Select **GET 7288/datasets(1)**  and click on **Send(2)**.
+
+    ![](./Media/post6.png)
+    
+1.  You should see the following response
+    ```
+    [
+    "resources\\sample-datasets\\common-stocks-uncommon-profits.txt",
+    "resources\\sample-datasets\\intelligent-investor.txt",
+    "resources\\sample-datasets\\random-walk-down-wall-street.txt"
+    ]
+    ```
+1. Under hydrate -> select **POST save 7288/datasets(1)** -> click on **Send(2)**.
+    ![](./Media/post7.png)
+   
+1. You should see the following response
+   
+    ```
+      {
+      "metadata": {
+         "userId": "50",
+         "riskLevel": "aggressive",
+         "favoriteSubReddit": "finance",
+         "favoriteAdvisor": "Jim Cramer"
+      },
+      "dataSetName": "intelligent-investor"
+
+      }
+    ```
+
+### 2.8 Explore the recommendation service
+
+1. Get back to tab where **Miyagi** ui page displaying
+1. Click personalize button
+
+    ![](./Media/post9.png)
+
+1. Notice financial advisor and click on personalize
+
+   ![](./Media/post10.png)
+
+1. You should see the recommendations from the recommendation service in the Top Stocks widget.
+
+## 3. TODO: Deploy Apps to Azure Container Apps
+
+## 4. TODO: Expose Open AI through APIM
 
 
 
