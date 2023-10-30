@@ -206,21 +206,23 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 1. If **This site is trying to open Postman.** window prompted click on **Open**.
 1. On the **Postman** blade select **Workspaces** and select **My Workspace**
 
-   ![](./Media/post2.png)
+   ![](./Media/post03.png)
 
 1. On the **My Workspace** blade, click on **import** 
 
    ![](./Media/post4.png)
 
 1. In **Drop anywhere to import** window, select **files** and navigate to C:\LabFiles\miyagi\services\recommendation-service\dotnet\setup.
-   ![](./Media/post5.png)
+
+    ![](./Media/post5.png)
 
 1. In File explorer window Select hydate.postman_collection.json, click on **Open**.
-   ![](./Media/post6.png)
+
+    ![](./Media/post(6).png)
  
 1.  Under hydrate -> Select **GET 7288/datasets(1)**  and click on **Send(2)**.
 
-    ![](./Media/post6.png)
+    ![](./Media/post7.png)
     
 1.  You should see the following response
     ```
@@ -231,7 +233,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
     ]
     ```
 1. Under hydrate -> select **POST save 7288/datasets(1)** -> click on **Send(2)**.
-    ![](./Media/post7.png)
+    ![](./Media/post8.png)
    
 1. You should see the following response
    
