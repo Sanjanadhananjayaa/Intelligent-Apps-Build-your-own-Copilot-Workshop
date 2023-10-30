@@ -37,7 +37,7 @@
 
 1. Update appsettings.json with the values for the variables below. You can get the values from the Azure Portal.
 
-1. To get deployment modules of "deploymentOrModelId": "<Id of the completions model you deployed>" and "embeddingDeploymentOrModelId":"<Id of the embedding model you deployed>" foolow the below steps:
+1. To get deployment modules of "deploymentOrModelId": "<Id of the completions model you deployed>" and "embeddingDeploymentOrModelId":"<Id of the embedding model you deployed>" follow the below steps:
    
       - In Azure Portal, click on **Resource groups** from the Navigate panel.
 
@@ -77,21 +77,20 @@
 
       >**Note**: Kindly record the deployments name in notepad you need this values in further tasks.
 
-1. For "endpoint": "<Your Open AI Endpoint>", "apiKey": "<Your OpenAI API Key>", 
+1. For "endpoint" and "apiKey": 
 
    **To get "endpoint" and **apiKey** follow the below steps:**
 
    1. Navigate back to the tab displaying **Azure portal**. 
 
-   1. On **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Resource Management** section select **Keys and Endpoint**, copy the **Key1** and **Endpoints** in notepad and get back to Visual studio code in appsettings.json file  paste **Key to "apiKey": "<Your OpenAI API Key>", and "endpoints" to "endpoint": "<Your Open AI Endpoint>",
+   1. On **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Resource Management** section select **Keys and Endpoint**, copy the **KEY1** and **Endpoint** values in notepad and get back to Visual studio code in appsettings.json file paste **Key to **"<Your OpenAI API Key>"**, and "endpoints" to **"<Your Open AI point>"**,
 
       ![](./Media/image-rg-3.png)
 
-1. For "azureCognitiveSearchEndpoint": "<Your Cognitive Search Endpoint>", "azureCognitiveSearchApiKey": "<Your Cognitive Search API Key>", copy Url to 
-   **azureCognitiveSearchEndpoint** and Key to **azureCognitiveSearchApiKey**
+       >**Note**: Kindly record the **KEY1** and **Endpoint** values in notepad you need this values in next further tasks.
 
-   **To get **azureCognitiveSearchEndpoint** and **azureCognitiveSearchApiKey** follow the below steps:**
- 
+1. To obtain the values for  "azureCognitiveSearchEndpoint": "<Your Cognitive Search Endpoint>", "azureCognitiveSearchApiKey": "<Your Cognitive Search API Key>", follow below steps:
+   
    1. Navigate back to miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>.
 
    1. On the miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> page, select acs-<inject key="DeploymentID" enableCopy="false"/> from resources list.
@@ -107,21 +106,21 @@
    
       ![](./Media/image-rg-14.png)
 
-       >**Note**: Please record **Key** values and paste in notepad you need this values in further tasks.
+       >**Note**: Please record **Key** values in notepad you need this values in further tasks.
 
-1. For "cosmosDbUri": Replace "<Your Cosmos DB URI>", "cosmosDbName": "miyagi".
-
-   **To get "<Your Cosmos DB URI>", "cosmosDbName" follow the below steps:**
+1. To obtain the values for "cosmosDbUri" and "cosmosDbName," please follow the steps below:
 
    1. Navigative back to resource group miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> page, select cosmos-<inject key="DeploymentID" enableCopy="false"/> from resources list.
       ![](./Media/image-rg-15.png)
 
-   1. On cosmos-<inject key="DeploymentID" enableCopy="false"/> copy the URL and name
+   1. On cosmos-<inject key="DeploymentID" enableCopy="false"/> copy the URL 
       ![](./Media/image-rg-16.png)
 
-   1. Get back to visual studio and paste URL to <Your Cosmos DB URI> and Name to cosmosDbName": miyagi.
+      >**Note**: Please record **URL** in notepad you need this values in further tasks.
+      
+   1. Get back to visual studio and paste URL to <Your Cosmos DB URI> and for cosmosDbName replace cosmos-<inject key="DeploymentID" enableCopy="false"/>
 
-        >**Note**: Please record **URL** and **Name** values and paste in notepad you need this values in further tasks.
+        >**Note**: Please record **Name** values in notepad you need this values in further tasks.
 
 1. For "blobServiceUri": "<Your blobServiceUri>", replace <Your blobServiceUri> with https://miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>.blob.core.windows.net/
 
@@ -161,12 +160,14 @@
    Use the following instructions to get the values for the arguments to the dotnet user-secrets set command
 
    -  **Bing API Key:** Provide **a6a11817493b4c2cb9a49d11bcd31e98**
-   -  **"deploymentOrModelId"** Replace <Your Open AI Completions model Deployment Id> with deployment name for gpt-35-turbo model
-   -  **"embeddingDeploymentOrModelId"** Replace  <Your Open AI Embeddings model Deployment Id> with deployment name for text-embedding-ada-002
-   -  **Open AI Endpoint: Replace "<Your Open AI Endpoint>" with Open AI Endpoint
+   -  **deploymentOrModelId** Replace <Your Open AI Completions model Deployment Id> with deployment name for gpt-35-turbo model
+   -  **embeddingDeploymentOrModelId** Replace  <Your Open AI Embeddings model Deployment Id> with deployment name for text-embedding-ada-002
+   -  **Open AI Endpoint**: Replace "<Your Open AI Endpoint>" with Open AI Endpoint
    -  **Open AI API Key:** Replace "<Your Open AI API Key>" with Open AI Key
-   -  **Cosmos DB Connection String:** Go to Azure Portal -> Resource Groups -> miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>  -> Select the cosmos-<inject key="DeploymentID" enableCopy="false"/>  -> Keys        > Copy the value of the Cosmos DB Connection String.
+   -  **Cosmos DB Connection String:** Go to Azure Portal -> Resource Groups -> select miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> -> Select the cosmos-<inject key="DeploymentID" enableCopy="false"/> -> 
+      Keys-> Copy the value of the Cosmos DB Connection String.
 
+      ![](./Media/string.png)
 
 ### 2.4 Understanding implementation of the recommendation service
 
@@ -179,7 +180,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
 ### 2.5 Run miyagi frontend locally
 
-1. Open a new terminal: by navigating  miyagi/ui/typescript and right-click on in cascade select **Open in intergate Terminal**.
+1. Open a new terminal: by navigating  miyagi/ui/typescript and right-click on **ui/typescript** , in cascading menu select **Open in intergate Terminal**.
 
    ![](./Media/image-rg-25.png)
 
@@ -190,10 +191,14 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
      yarn install
      yarn dev
     ```
-1. Open a browser and navigate to
+
+   >**Note**: Wait for 2 - 3 mins and proceed with next step dont wait for script to complete.
+
+1. Open a another tab in edge, and  browser the following
    ```
      http://localhost:4001
    ```
+
    Get the port from the logs in the terminal. You should see the miyagi app running locally.
 
    ![](./Media/miyagi1.png)
@@ -209,17 +214,21 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
      dotnet build
      dotnet run
     ```
-1. Open a browser and navigate to
+
+   >**Note**: Wait for 2 - 3 mins and proceed with next step dont wait for script to complete
+
+1. Open a another tab in edge, and  browser the following
    ```
      http://localhost:5224/swagger/index.html 
    ```
+
    Get the port from the logs in the terminal. You should see the swagger page for the recommendation service.
 
    ![](./Media/miyagi2.png)
 
 
 ### 2.7 Vectorize and persist embeddings in Azure Cognitive Search
-1. Within LabVm double click on **Postman** to open which is present on desktop
+1. Within LabVm double click on **Postman** to open which is presented on desktop.
 1. On **Create a free Postman account** provide email and click on **Create free account**.
 1. On **Create Postman account** window, provide following information and click on **Create free account**.
 
