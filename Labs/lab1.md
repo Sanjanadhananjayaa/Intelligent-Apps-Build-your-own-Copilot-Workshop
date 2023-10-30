@@ -91,6 +91,309 @@
    ![](./Media/image-rg-24.png)
 
 
+ #### Task 2: Setup .NET secrets
+
+1. Navigate to miyagi/services/recommendation-service/dotnet, right click on dotnet and select **Open in intergate Terminal**.
+1. Run the following command to set the secrets for the recommendation service. You will need to provide the values for the variables below.
+   
+     ```
+          dotnet user-secrets set "USE_OPEN_AI" "False"
+          dotnet user-secrets set "serviceType" "AzureOpenAI"
+          dotnet user-secrets set "BING_API_KEY" "<Your Bing API Key>"
+          dotnet user-secrets set "MEMORY_COLLECTION" "miyagi-embeddings"
+          dotnet user-secrets set "deploymentOrModelId" "<Your Open AI Completions model Deployment Id>"
+          dotnet user-secrets set "embeddingDeploymentOrModelId" "<Your Open AI Embeddings model Deployment Id>"
+          dotnet user-secrets set "endpoint" "<Your Open AI Endpoint>" 
+          dotnet user-secrets set "apiKey" "<Your Open AI API Key>"
+          dotnet user-secrets set "COSMOS_DB_CONNECTION_STRING" "<Cosmos DB Connection String>"
+         
+     ```
+   Use the following instructions to get the values for the arguments to the dotnet user-secrets set command
+
+   -  **Bing API Key:** Provide **a6a11817493b4c2cb9a49d11bcd31e98**
+   -  **"deploymentOrModelId"** Replace <Your Open AI Completions model Deployment Id> with deployment name for gpt-35-turbo model
+   -  **"embeddingDeploymentOrModelId"** Replace  <Your Open AI Embeddings model Deployment Id> with deployment name for text-embedding-ada-002
+   -  **Open AI Endpoint: Replace "<Your Open AI Endpoint>" with Open AI Endpoint
+   -  **Open AI API Key:** Replace "<Your Open AI API Key>" with Open AI Key
+   -  **Cosmos DB Connection String:** Go to Azure Portal -> Resource Groups -> miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>  -> Select the cosmos-<inject key="DeploymentID" enableCopy="false"/>  -> Keys        > Copy the value of the Cosmos DB Connection String.
+
+
+### 2.4 Understanding implementation of the recommendation service
+
+Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step by step details of how the Recommendation Service is implemented. Pay special attention to how RAG pattern is implemented using Semantic Kernel. Select kernel as .NET Interactive in the top right corner of the notebook.
+
+1. In Visual Studio Code navigate to miyagi/sandbox/usecases/rag/dotnet folder and select **Getting-started.ipynb**
+   ![](./Media/image-rg-23.png)
+
+3. Execute the notebook cell by cell (using either Ctrl + Enter to stay on the same cell or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
+
+### 2.5 Run miyagi frontend locally
+
+1. Open a new terminal: by navigating  miyagi/ui/typescript and right-click on in cascade select **Open in intergate Terminal**.
+
+   ![](./Media/image-rg-25.png)
+
+1. Run the following command to install the dependencies
+   
+    ```
+     npm install --global yarn
+     yarn install
+     yarn dev
+    ```
+1. Open a browser and navigate to
+   ```
+     http://localhost:4001
+   ```
+   Get the port from the logs in the terminal. You should see the miyagi app running locally.
+
+   ![](./Media/miyagi1.png)
+   
+### 2.6 Run recommendation service locally
+
+1. Open a new terminal: by navigating miyagi/services/recommendation-service/dotnet and right-click on in cascade select **Open in intergate Terminal**.
+
+    ![](./Media/image-rg-26.png)
+
+1. Run the following command to run the recommendation service locally
+    ```
+     dotnet build
+     dotnet run
+    ```
+1. Open a browser and navigate to
+   ```
+     http://localhost:<port>/swagger/index.html Default port is 5224
+   ```
+   Get the port from the logs in the terminal. You should see the swagger page for the recommendation service.
+
+   ![](./Media/miyagi2.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
