@@ -39,7 +39,7 @@
 
 1. Update appsettings.json with the values for the variables below. You can get the values from the Azure Portal.
 
-1. To get deployment modules of "deploymentOrModelId": "<Id of the completions model you deployed>" and "embeddingDeploymentOrModelId":"<Id of the embedding model you deployed>" follow the below steps:
+1. To obtain the deployment model names for "deploymentOrModelId": "<Id of the completions model you deployed>" and "embeddingDeploymentOrModelId":"<Id of the embedding model you deployed>" follow the below steps:
    
       - In Azure Portal, click on **Resource groups** from the Navigate panel.
 
@@ -70,7 +70,7 @@
       
       -  Navigate back to deployment page
 
-      - On the Deployments blade of Azure AI Studio, click on text-embedding-ada-002 model and Copy full deployment name of text-embedding-ada-002 model and enter copied deployment for 
+      - On the Deployments blade of Azure AI Studio, click on text-embedding-ada-002 model name **(1)** and Copy full deployment name of text-embedding-ada-002 model **(2)** and enter copied deployment for 
         **"embeddingDeploymentOrModelId"** in appsettings.json by navigating back to visual studio code.   
 
          ![](./Media/image-rg-10.png)
@@ -79,13 +79,11 @@
 
       >**Note**: Kindly record the both deployment name's in notepad you need this values in further tasks.
 
-1. For "endpoint" and "apiKey": 
+1. To obtain the values for **endpoint** and **apiKey** follow the below steps:
 
-   **To obtain the values for "endpoint" and **apiKey** follow the below steps:**
+   -  Navigate back to the tab displaying **Azure portal**. 
 
-   1. Navigate back to the tab displaying **Azure portal**. 
-
-   1. On **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Resource Management** section select **Keys and Endpoint**, copy the **KEY1** and **Endpoint** values in notepad and get back to Visual studio code in appsettings.json file paste **Key to **"<Your OpenAI API Key>"**, and "endpoints" to **"<Your Open AI point>"**,
+   -  On **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Resource Management** section select **Keys and Endpoint**, copy the **KEY1** and **Endpoint** values in notepad and get back to Visual studio code in appsettings.json file paste **Key to **"<Your OpenAI API Key>"**, and "endpoints" to **"<Your Open AI point>"**,
 
       ![](./Media/image-rg-3.png)
 
