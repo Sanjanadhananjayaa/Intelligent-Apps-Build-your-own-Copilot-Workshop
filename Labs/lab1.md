@@ -5,14 +5,16 @@
 1. Within the Labvm select Visual Studio Code which is presented on desktop, double click on it to open.
 
    >**Note** If **Join us in making promt-flow extension better!** window prompted please click on **No,thanks**.
-    ![](./Media/image-rg-01.png)
+
+   ![](./Media/image-rg-01.png)
    
 1. In Visual Studio Code from menu bar select **File(1)** **Open folder(2)**,
-    ![](./Media/image-rg-02.png)
+
+   ![](./Media/image-rg-02.png)
 
 1. In file explorer navigate to C:\LabFiles\miyagi select **miyagi**(1) click on **open folder(2)**
 
-   ![](./Media/image-rg-003.png)
+   ![](./Media/image-rg(003).png)
 
 1. In Visual Studio Code if **Do you trust the authors of the files in this folder?** window prompted click on **Yes, I trust the authors**.
    ![](./Media/image-rg-18.png)
@@ -26,7 +28,7 @@
    
    ![](./Media/image-rg-04.png)
 
-1. Expand **miyagi/services/recommendation-service/dotnet** and click on **New file (3)** icon and create a new file called appsettings.json
+1. Expand **miyagi(1)/services(2)/recommendation-service(3)/dotnet(4)** and click on **New file (5)** icon and create a new file called **appsettings.json(6)**
 
    ![](./Media/image-rg-20.png)
    
@@ -42,16 +44,18 @@
       - In Azure Portal, click on **Resource groups** from the Navigate panel.
 
       - From the Resource groups page, click on miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>.
-        ![](./Media/image-rg-1.png)
+
+         ![](./Media/image-rg-1.png)
 
       - On **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**, from the Overview (1) tab select the OpenAIService-<inject key="DeploymentID" enableCopy="false"/> (2).
+
         ![](./Media/image-rg-2.png)
 
-       - On the OpenAI Overview (1) page and right-click on Go to Azure OpenAI Studio (2) button and click on Open link a new tab.
+      - On the OpenAI Overview (1) page and right-click on Go to Azure OpenAI Studio (2) button and click on Open link a new tab.
 
          ![](./Media/image-rg-03.png) 
    
-       - When Pick an account window prompted kindly select your account to sign-in.
+      - When Pick an account window prompted kindly select your account to sign-in.
  
       - In the Azure AI Studio, select Deployments, under Management section.
         ![](./Media/image-rg-6.png)
@@ -63,7 +67,7 @@
         
           ![](./Media/image-rg-8.png)
 
-        >**Note**: Kindly record deployment name of gpt-35-turbo model values in Notepad you need this values in further tasks.
+          >**Note**: Kindly record deployment name of gpt-35-turbo model values in Notepad you need this values in further tasks.
       
       -  Navigate back to deployment page
 
@@ -79,7 +83,7 @@
 
 1. For "endpoint" and "apiKey": 
 
-   **To get "endpoint" and **apiKey** follow the below steps:**
+   **To obtain the values for "endpoint" and **apiKey** follow the below steps:**
 
    1. Navigate back to the tab displaying **Azure portal**. 
 
@@ -178,6 +182,8 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
 3. Execute the notebook cell by cell (using either Ctrl + Enter to stay on the same cell or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
 
+   ![](./Media/run.png)
+   
 ### 2.5 Run miyagi frontend locally
 
 1. Open a new terminal: by navigating  miyagi/ui/typescript and right-click on **ui/typescript** , in cascading menu select **Open in intergate Terminal**.
