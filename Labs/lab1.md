@@ -112,6 +112,7 @@
 
    ![](./Media/image-rg-24.png)
 
+1. For AZURE_COGNITIVE_SEARCH_ENDPOINT="https://<...>.search.windows.net", AZURE_COGNITIVE_SEARCH_API_KEY="<...>", navigate back to resource group 
 
  #### Task 2: Setup .NET secrets
 
@@ -183,7 +184,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
     ```
 1. Open a browser and navigate to
    ```
-     http://localhost:<port>/swagger/index.html Default port is 5224
+     http://localhost:5224/swagger/index.html 
    ```
    Get the port from the logs in the terminal. You should see the swagger page for the recommendation service.
 
