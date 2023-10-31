@@ -1,4 +1,4 @@
-# Lab 1 - Run migayi locally
+# Lab 1 - Run miyagi locally
 
 #### Task 1: Setup configuration for miyagi app
 
