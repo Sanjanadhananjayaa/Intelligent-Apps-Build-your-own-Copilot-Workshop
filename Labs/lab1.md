@@ -21,24 +21,11 @@ In this lab, you'll setup and configure Miyagi app locally.
 1. In Visual Studio Code if **Do you trust the authors of the files in this folder?** window prompted click on **Yes, I trust the authors**.
    ![](./Media/image-rg-18.png)
    
-1. Expand **miyagi(1)** >**ui/typescript (2)** and click on **New file (3)** icon and create a new file called **.env. (4)**
+1. Expand **miyagi(1)** >**ui/typescript (2)** and verify **.env. (4)** file is present
     ![](./Media/image-rg-19.png)
 
-1. Copy paste the contents of .env.local.example into .env and save the file.
-
-   >**Note**: You can find .env.local.example below the .env file
-   
-   ![](./Media/image-rg-04.png)
-
-1. Expand **miyagi(1)/services(2)/recommendation-service(3)/dotnet(4)** and click on **New file (5)** icon and create a new file called **appsettings.json(6)**
-
-   ![](./Media/image-rg-20.png)
-   
-1. Copy paste the contents of appsettings.json.example into appsettings.json and save the file
-
-   >**Note**: You can find appsettings.json.example below the appsettings.json file
-   ![](./Media/image-rg-05.png)
-
+1. Expand **miyagi/services/recommendation-service/dotnet** and verify **appsettings.json** is present.
+  
 1. Update appsettings.json with the values for the variables below. You can get the values from the Azure Portal.
 
 1. To obtain the deployment model names for "deploymentOrModelId": "<Id of the completions model you deployed>" and "embeddingDeploymentOrModelId":"<Id of the embedding model you deployed>" follow the below steps:
@@ -130,13 +117,9 @@ In this lab, you'll setup and configure Miyagi app locally.
 
 1. Once afer updating the values kindly save the file by pressing **CTRL + S**.
 
-1. Create a new file named .env in miyagi/sandbox/usecases/rag/dotnet
-
-   ![](./Media/image-rg-21.png)
-   
-1. Copy paste the contents of .env.example into .env and save the file
-
-1. Copy the values which you recorded into .env file and save the file
+1. Navigate to miyagi/sandbox/usecases/rag/dotnet and verify .env file is present
+  
+1. Update the values which you recorded in previous steps into .env file and save the file
 
    >**Note**: Please refer the below image to know how to update the values in .env files.
 
@@ -144,7 +127,7 @@ In this lab, you'll setup and configure Miyagi app locally.
 
  ### Task 2: Setup .NET secrets
 
-1. Navigate to miyagi/services/recommendation-service/dotnet, right click on dotnet and select **Open in intergate Terminal**.
+1. Navigate to miyagi/services/recommendation-service/dotnet, right click on dotnet and in cascading menu, select **Open in intergate Terminal**.
 1. Run the following command to set the secrets for the recommendation service. You will need to provide the values for the variables below.
    
      ```
@@ -178,9 +161,12 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 1. In Visual Studio Code navigate to miyagi/sandbox/usecases/rag/dotnet folder and select **Getting-started.ipynb**
    ![](./Media/image-rg-23.png)
 
-3. Execute the notebook cell by cell (using either Ctrl + Enter to stay on the same cell or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
+1. Execute the notebook cell by cell (using either Ctrl + Enter to stay on the same cell or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
 
    ![](./Media/run.png)
+
+ 1. Once after Excuting all the cell you need see the output as shown below
+    ![](./Media/output.png)
    
 ### Task 4 Run miyagi frontend locally
 
@@ -196,7 +182,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
      yarn dev
     ```
 
-   >**Note**: Wait for 2 - 3 mins and proceed with next step dont wait for script to complete.
+   >**Note**: Wait for 5 mins and proceed with next step dont wait for script to complete.
 
 1. Open a another tab in edge, and  browser the following
    ```
@@ -219,7 +205,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
      dotnet run
     ```
 
-   >**Note**: Wait for 2 - 3 mins and proceed with next step dont wait for script to complete
+   >**Note**: Wait for 5 mins and proceed with next step dont wait for script to complete
 
 1. Open a another tab in edge, and  browser the following
    ```
@@ -240,11 +226,12 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    | **Settings**         | **Values**           | 
    | -------------------- | -------------------- | 
    | Email                | <inject key="AzureAdUserEmail"></inject>  | 
-   | Username             | Odluser              |
+   | Username             | Odluser<inject key="DeploymentID" enableCopy="false"/>              |
    | Password             | Pa55w.rd1234         |
    | Stay signed in for 30 days | Select the checkbox |
    
 1. If **This site is trying to open Postman.** window prompted click on **Open**.
+1. If **Welcome to Postman! Tell us a bit about yourself** provide Yourname Odluser<inject key="DeploymentID" enableCopy="false"/>  and role, click on continue. 
 1. On the **Postman** blade select **Workspaces** and select **My Workspace**
 
    ![](./Media/post03.png)
