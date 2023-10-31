@@ -1,17 +1,16 @@
 [
   {
-    "Name": "AI 900 AI Fundamentals-module-01-Explore Cognitive Services",
+    "Name": "Intelligent-Apps-Build-your-own-Copilot-Workshop",
     "Language": "English",
     "Files": [
 	    {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-900-AIFundamentals/prod/instructions/0-GettingStarted.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/Intelligent-Apps-Build-your-own-Copilot-Workshop/main/Labs/Gettingstarted.md
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-900-AIFundamentals/prod/instructions/01-module-01.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/Intelligent-Apps-Build-your-own-Copilot-Workshop/main/Labs/lab1.md
         "Order": 2
       }
     ]
   }
 ]
-
