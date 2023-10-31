@@ -4,7 +4,7 @@ In this lab, you'll setup and configure Miyagi app locally.
 
 ### Task 1: Setup configuration for miyagi app
 
-1. Within the Labvm select Visual Studio Code which is presented on desktop, double click on it to open.
+1. Open Visual Studio Code on the Lab VM by selecting the shortcut on the desktop and then double-click on it to open.
 
    >**Note** If **Join us in making promt-flow extension better!** window prompted please click on **No,thanks**.
 
@@ -21,27 +21,13 @@ In this lab, you'll setup and configure Miyagi app locally.
 1. In Visual Studio Code if **Do you trust the authors of the files in this folder?** window prompted click on **Yes, I trust the authors**.
    ![](./Media/image-rg-18.png)
    
-1. Expand **miyagi(1)** >**ui/typescript (2)** and click on **New file (3)** icon and create a new file called **.env. (4)**
-    ![](./Media/image-rg-19.png)
+1. Expand **miyagi>ui/typescript** and verify **.env.** file is present
 
-1. Copy paste the contents of .env.local.example into .env and save the file.
-
-   >**Note**: You can find .env.local.example below the .env file
-   
-   ![](./Media/image-rg-04.png)
-
-1. Expand **miyagi(1)/services(2)/recommendation-service(3)/dotnet(4)** and click on **New file (5)** icon and create a new file called **appsettings.json(6)**
-
-   ![](./Media/image-rg-20.png)
-   
-1. Copy paste the contents of appsettings.json.example into appsettings.json and save the file
-
-   >**Note**: You can find appsettings.json.example below the appsettings.json file
-   ![](./Media/image-rg-05.png)
-
+1. Expand **miyagi/services/recommendation-service/dotnet** and verify **appsettings.json** is present.
+  
 1. Update appsettings.json with the values for the variables below. You can get the values from the Azure Portal.
 
-1. To obtain the deployment model names for "deploymentOrModelId": "<Id of the completions model you deployed>" and "embeddingDeploymentOrModelId":"<Id of the embedding model you deployed>" follow the below steps:
+1. To obtain the deployment model names for "deploymentOrModelId" and "embeddingDeploymentOrModelId" follow the below steps:
    
       - In Azure Portal, click on **Resource groups** from the Navigate panel.
 
@@ -57,8 +43,6 @@ In this lab, you'll setup and configure Miyagi app locally.
 
          ![](./Media/image-rg-03.png) 
    
-      - When Pick an account window prompted kindly select your account to sign-in.
- 
       - In the Azure AI Studio, select Deployments, under Management section.
         ![](./Media/image-rg-6.png)
 
@@ -79,7 +63,7 @@ In this lab, you'll setup and configure Miyagi app locally.
 
          ![](./Media/image-rg-11.png)
 
-      >**Note**: Kindly record the both deployment name's in notepad you need this values in further tasks.
+      >**Note**: Kindly record the text-embedding-ada-002 model name in notepad you need this values in further tasks.
 
 1. To obtain the values for **endpoint** and **apiKey** follow the below steps:
 
@@ -91,9 +75,9 @@ In this lab, you'll setup and configure Miyagi app locally.
 
        >**Note**: Kindly record the **KEY1** and **Endpoint** values in notepad you need this values in next further tasks.
 
-1. To obtain the values for  "azureCognitiveSearchEndpoint": "<Your Cognitive Search Endpoint>", "azureCognitiveSearchApiKey": "<Your Cognitive Search API Key>", follow below steps:
+1. To obtain the values for  "azureCognitiveSearchEndpoint", "azureCognitiveSearchApiKey", follow below steps:
    
-   1. Navigate back to miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>.
+   1. Navigate back to miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> resource group.
 
    1. On the miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> page, select acs-<inject key="DeploymentID" enableCopy="false"/> from resources list.
    ![](./Media/image-rg-12.png)
@@ -103,7 +87,7 @@ In this lab, you'll setup and configure Miyagi app locally.
 
       >**Note**: Please record **URL** and paste in notepad you need this values in further tasks.
 
-   1. On acs-<inject key="DeploymentID" enableCopy="false"/> blade, under **Settings** section, select **Keys** copy the key and paste to **azureCognitiveSearchApiKey** 
+   1. On acs-<inject key="DeploymentID" enableCopy="false"/> blade, under **Settings** section, copy **Primary admin Key** values and paste to **azureCognitiveSearchApiKey** 
       in visual studio code
    
       ![](./Media/image-rg-14.png)
@@ -112,7 +96,7 @@ In this lab, you'll setup and configure Miyagi app locally.
 
 1. To obtain the values for "cosmosDbUri" and "cosmosDbName," please follow the steps below:
 
-   1. Navigative back to resource group miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> page, select cosmos-<inject key="DeploymentID" enableCopy="false"/> from resources list.
+   1. Navigative back to resource group miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> resource group page, select cosmos-<inject key="DeploymentID" enableCopy="false"/> from resources list.
       ![](./Media/image-rg-15.png)
 
    1. On cosmos-<inject key="DeploymentID" enableCopy="false"/> copy the URL 
@@ -120,23 +104,19 @@ In this lab, you'll setup and configure Miyagi app locally.
 
       >**Note**: Please record **URL** in notepad you need this values in further tasks.
       
-   1. Get back to visual studio and paste URL to <Your Cosmos DB URI> and for cosmosDbName replace cosmos-<inject key="DeploymentID" enableCopy="false"/>
+   1. Get back to visual studio and paste URL to Cosmos DB URI and for cosmosDbName replace cosmos-<inject key="DeploymentID" enableCopy="false"/>
 
         >**Note**: Please record **Name** values in notepad you need this values in further tasks.
 
-1. For "blobServiceUri": "<Your blobServiceUri>", replace <Your blobServiceUri> with https://miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>.blob.core.windows.net/
+1. For "blobServiceUri", replace Your **blobServiceUri** with https://miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>.blob.core.windows.net/
 
 1. Leave default settings for  "cosmosDbContainerName": "recommendations","logLevel": "Trace"
 
 1. Once afer updating the values kindly save the file by pressing **CTRL + S**.
 
-1. Create a new file named .env in miyagi/sandbox/usecases/rag/dotnet
-
-   ![](./Media/image-rg-21.png)
-   
-1. Copy paste the contents of .env.example into .env and save the file
-
-1. Copy the values which you recorded into .env file and save the file
+1. Navigate to miyagi/sandbox/usecases/rag/dotnet and verify .env file is present
+  
+1. Update the values which you recorded in previous steps into .env file and save the file
 
    >**Note**: Please refer the below image to know how to update the values in .env files.
 
@@ -144,7 +124,7 @@ In this lab, you'll setup and configure Miyagi app locally.
 
  ### Task 2: Setup .NET secrets
 
-1. Navigate to miyagi/services/recommendation-service/dotnet, right click on dotnet and select **Open in intergate Terminal**.
+1. Navigate to miyagi/services/recommendation-service/dotnet, right click on dotnet and in cascading menu, select **Open in intergate Terminal**.
 1. Run the following command to set the secrets for the recommendation service. You will need to provide the values for the variables below.
    
      ```
@@ -167,22 +147,25 @@ In this lab, you'll setup and configure Miyagi app locally.
    -  **Open AI Endpoint**: Replace "<Your Open AI Endpoint>" with Open AI Endpoint
    -  **Open AI API Key:** Replace "<Your Open AI API Key>" with Open AI Key
    -  **Cosmos DB Connection String:** Go to Azure Portal -> Resource Groups -> select miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> -> Select the cosmos-<inject key="DeploymentID" enableCopy="false"/> -> 
-      Keys-> Copy the value of the Cosmos DB Connection String.
+      Keys-> Copy the value of the Cosmos DB Primary Connection String.
 
       ![](./Media/string.png)
 
-### Task 3 Understanding implementation of the recommendation service
+### Task 3: Understanding implementation of the recommendation service
 
 Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step by step details of how the Recommendation Service is implemented. Pay special attention to how RAG pattern is implemented using Semantic Kernel. Select kernel as .NET Interactive in the top right corner of the notebook.
 
 1. In Visual Studio Code navigate to miyagi/sandbox/usecases/rag/dotnet folder and select **Getting-started.ipynb**
    ![](./Media/image-rg-23.png)
 
-3. Execute the notebook cell by cell (using either Ctrl + Enter to stay on the same cell or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
+1. Execute the notebook cell by cell (using either Ctrl + Enter to stay on the same cell or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
 
    ![](./Media/run.png)
+
+ 1. Once after Excuting all the cell you need see the output as shown in below diagram.
+    ![](./Media/output.png)
    
-### Task 4 Run miyagi frontend locally
+### Task 4: Run miyagi frontend locally
 
 1. Open a new terminal: by navigating  miyagi/ui/typescript and right-click on **ui/typescript** , in cascading menu select **Open in intergate Terminal**.
 
@@ -196,7 +179,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
      yarn dev
     ```
 
-   >**Note**: Wait for 2 - 3 mins and proceed with next step dont wait for script to complete.
+   >**Note**: Wait for 5 mins and proceed with next step dont wait for script to complete.
 
 1. Open a another tab in edge, and  browser the following
    ```
@@ -207,7 +190,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
    ![](./Media/miyagi1.png)
    
-### Task 5 Run recommendation service locally
+### Task 5: Run recommendation service locally
 
 1. Open a new terminal: by navigating miyagi/services/recommendation-service/dotnet and right-click on in cascade select **Open in intergate Terminal**.
 
@@ -219,7 +202,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
      dotnet run
     ```
 
-   >**Note**: Wait for 2 - 3 mins and proceed with next step dont wait for script to complete
+   >**Note**: Wait for 5 mins and proceed with next step dont wait for script to complete
 
 1. Open a another tab in edge, and  browser the following
    ```
@@ -231,7 +214,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    ![](./Media/miyagi2.png)
 
 
-### Task 6 Vectorize and persist embeddings in Azure Cognitive Search
+### Task 6: Vectorize and persist embeddings in Azure Cognitive Search
 
 1. Within LabVm double click on **Postman** to open which is presented on desktop.
 1. On **Create a free Postman account** provide email and click on **Create free account**.
@@ -240,11 +223,12 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    | **Settings**         | **Values**           | 
    | -------------------- | -------------------- | 
    | Email                | <inject key="AzureAdUserEmail"></inject>  | 
-   | Username             | Odluser              |
+   | Username             | Odluser<inject key="DeploymentID" enableCopy="false"/>              |
    | Password             | Pa55w.rd1234         |
    | Stay signed in for 30 days | Select the checkbox |
    
 1. If **This site is trying to open Postman.** window prompted click on **Open**.
+1. If **Welcome to Postman! Tell us a bit about yourself** provide Yourname Odluser<inject key="DeploymentID" enableCopy="false"/>  and role, click on continue. 
 1. On the **Postman** blade select **Workspaces** and select **My Workspace**
 
    ![](./Media/post03.png)
@@ -291,7 +275,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
       }
     ```
 
-### Task 7 Explore the recommendation service
+### Task 7: Explore the recommendation service
 
 1. Get back to tab where **Miyagi** ui page displaying
 1. Click personalize button
