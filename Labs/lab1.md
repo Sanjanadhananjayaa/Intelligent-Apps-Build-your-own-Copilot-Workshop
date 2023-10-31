@@ -21,14 +21,13 @@ In this lab, you'll setup and configure Miyagi app locally.
 1. In Visual Studio Code if **Do you trust the authors of the files in this folder?** window prompted click on **Yes, I trust the authors**.
    ![](./Media/image-rg-18.png)
    
-1. Expand **miyagi(1)** >**ui/typescript (2)** and verify **.env. (4)** file is present
-    ![](./Media/image-rg-19.png)
+1. Expand **miyagi>ui/typescript** and verify **.env.** file is present
 
 1. Expand **miyagi/services/recommendation-service/dotnet** and verify **appsettings.json** is present.
   
 1. Update appsettings.json with the values for the variables below. You can get the values from the Azure Portal.
 
-1. To obtain the deployment model names for "deploymentOrModelId": "<Id of the completions model you deployed>" and "embeddingDeploymentOrModelId":"<Id of the embedding model you deployed>" follow the below steps:
+1. To obtain the deployment model names for "deploymentOrModelId" and "embeddingDeploymentOrModelId" follow the below steps:
    
       - In Azure Portal, click on **Resource groups** from the Navigate panel.
 
@@ -78,7 +77,7 @@ In this lab, you'll setup and configure Miyagi app locally.
 
        >**Note**: Kindly record the **KEY1** and **Endpoint** values in notepad you need this values in next further tasks.
 
-1. To obtain the values for  "azureCognitiveSearchEndpoint": "<Your Cognitive Search Endpoint>", "azureCognitiveSearchApiKey": "<Your Cognitive Search API Key>", follow below steps:
+1. To obtain the values for  "azureCognitiveSearchEndpoint", "azureCognitiveSearchApiKey", follow below steps:
    
    1. Navigate back to miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>.
 
@@ -107,11 +106,11 @@ In this lab, you'll setup and configure Miyagi app locally.
 
       >**Note**: Please record **URL** in notepad you need this values in further tasks.
       
-   1. Get back to visual studio and paste URL to <Your Cosmos DB URI> and for cosmosDbName replace cosmos-<inject key="DeploymentID" enableCopy="false"/>
+   1. Get back to visual studio and paste URL to Cosmos DB URI and for cosmosDbName replace cosmos-<inject key="DeploymentID" enableCopy="false"/>
 
         >**Note**: Please record **Name** values in notepad you need this values in further tasks.
 
-1. For "blobServiceUri": "<Your blobServiceUri>", replace <Your blobServiceUri> with https://miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>.blob.core.windows.net/
+1. For "blobServiceUri", replace Your **blobServiceUri** with https://miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>.blob.core.windows.net/
 
 1. Leave default settings for  "cosmosDbContainerName": "recommendations","logLevel": "Trace"
 
