@@ -4,7 +4,7 @@ In this lab, you'll setup and configure Miyagi app locally.
 
 ### Task 1: Setup configuration for miyagi app
 
-1. Within the Labvm select Visual Studio Code which is presented on desktop, double click on it to open.
+1. Open Visual Studio Code on the Lab VM by selecting the shortcut on the desktop and then double-click on it to open.
 
    >**Note** If **Join us in making promt-flow extension better!** window prompted please click on **No,thanks**.
 
@@ -43,8 +43,6 @@ In this lab, you'll setup and configure Miyagi app locally.
 
          ![](./Media/image-rg-03.png) 
    
-      - When Pick an account window prompted kindly select your account to sign-in.
- 
       - In the Azure AI Studio, select Deployments, under Management section.
         ![](./Media/image-rg-6.png)
 
@@ -65,7 +63,7 @@ In this lab, you'll setup and configure Miyagi app locally.
 
          ![](./Media/image-rg-11.png)
 
-      >**Note**: Kindly record the both deployment name's in notepad you need this values in further tasks.
+      >**Note**: Kindly record the text-embedding-ada-002 model name in notepad you need this values in further tasks.
 
 1. To obtain the values for **endpoint** and **apiKey** follow the below steps:
 
@@ -79,7 +77,7 @@ In this lab, you'll setup and configure Miyagi app locally.
 
 1. To obtain the values for  "azureCognitiveSearchEndpoint", "azureCognitiveSearchApiKey", follow below steps:
    
-   1. Navigate back to miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>.
+   1. Navigate back to miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> resource group.
 
    1. On the miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> page, select acs-<inject key="DeploymentID" enableCopy="false"/> from resources list.
    ![](./Media/image-rg-12.png)
@@ -98,7 +96,7 @@ In this lab, you'll setup and configure Miyagi app locally.
 
 1. To obtain the values for "cosmosDbUri" and "cosmosDbName," please follow the steps below:
 
-   1. Navigative back to resource group miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> page, select cosmos-<inject key="DeploymentID" enableCopy="false"/> from resources list.
+   1. Navigative back to resource group miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> resource group page, select cosmos-<inject key="DeploymentID" enableCopy="false"/> from resources list.
       ![](./Media/image-rg-15.png)
 
    1. On cosmos-<inject key="DeploymentID" enableCopy="false"/> copy the URL 
@@ -164,7 +162,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
    ![](./Media/run.png)
 
- 1. Once after Excuting all the cell you need see the output as shown below
+ 1. Once after Excuting all the cell you need see the output as shown in below diagram.
     ![](./Media/output.png)
    
 ### Task 4: Run miyagi frontend locally
