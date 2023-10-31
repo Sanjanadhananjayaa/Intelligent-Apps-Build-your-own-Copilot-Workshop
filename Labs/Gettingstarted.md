@@ -12,18 +12,19 @@
 ## Login to the Azure Portal
 
 1. In the JumpVM, click on the Azure portal shortcut of the Microsoft Edge browser, which is created on the desktop.
+   ![](./Media/img3.png)
 
 1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. Enter the following email or username, and click on **Next**. 
 
    * **Email/Username**: <inject key="AzureAdUserEmail"></inject>
 
-     ![](./Media/img3.png)
+     ![](./Media/img4.png)
      
 1. Now enter the following password and click on **Sign in**.
    
    * **Password**: <inject key="AzureAdUserPassword"></inject>
 
-     ![](./Media/img4.png)
+     ![](./Media/img5.png)
    
 1. If you see the pop-up **Stay Signed in?**, select **No**.
 
@@ -33,7 +34,7 @@
 
 1. If a **Welcome to Microsoft Azure** popup window appears, select **Maybe Later** to skip the tour.
 
-    ![](./Media/img5.png)
+    ![](./Media/img6.png)
    
 1. Now that you will see the Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
 
