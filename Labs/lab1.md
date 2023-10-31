@@ -87,7 +87,7 @@ In this lab, you'll setup and configure Miyagi app locally.
 
       >**Note**: Please record **URL** and paste in notepad you need this values in further tasks.
 
-   1. On acs-<inject key="DeploymentID" enableCopy="false"/> blade, under **Settings** section, select **Keys** copy the key and paste to **azureCognitiveSearchApiKey** 
+   1. On acs-<inject key="DeploymentID" enableCopy="false"/> blade, under **Settings** section, copy **Primary admin Key** values and paste to **azureCognitiveSearchApiKey** 
       in visual studio code
    
       ![](./Media/image-rg-14.png)
@@ -147,7 +147,7 @@ In this lab, you'll setup and configure Miyagi app locally.
    -  **Open AI Endpoint**: Replace "<Your Open AI Endpoint>" with Open AI Endpoint
    -  **Open AI API Key:** Replace "<Your Open AI API Key>" with Open AI Key
    -  **Cosmos DB Connection String:** Go to Azure Portal -> Resource Groups -> select miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> -> Select the cosmos-<inject key="DeploymentID" enableCopy="false"/> -> 
-      Keys-> Copy the value of the Cosmos DB Connection String.
+      Keys-> Copy the value of the Cosmos DB Primary Connection String.
 
       ![](./Media/string.png)
 
