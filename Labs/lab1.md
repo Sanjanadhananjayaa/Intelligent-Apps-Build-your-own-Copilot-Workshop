@@ -154,7 +154,7 @@ In this lab, you'll setup and configure Miyagi app locally.
 
       ![](./Media/string.png)
 
-### Task 3 Understanding implementation of the recommendation service
+### Task 3: Understanding implementation of the recommendation service
 
 Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step by step details of how the Recommendation Service is implemented. Pay special attention to how RAG pattern is implemented using Semantic Kernel. Select kernel as .NET Interactive in the top right corner of the notebook.
 
@@ -168,7 +168,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
  1. Once after Excuting all the cell you need see the output as shown below
     ![](./Media/output.png)
    
-### Task 4 Run miyagi frontend locally
+### Task 4: Run miyagi frontend locally
 
 1. Open a new terminal: by navigating  miyagi/ui/typescript and right-click on **ui/typescript** , in cascading menu select **Open in intergate Terminal**.
 
@@ -193,7 +193,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
    ![](./Media/miyagi1.png)
    
-### Task 5 Run recommendation service locally
+### Task 5: Run recommendation service locally
 
 1. Open a new terminal: by navigating miyagi/services/recommendation-service/dotnet and right-click on in cascade select **Open in intergate Terminal**.
 
@@ -217,7 +217,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    ![](./Media/miyagi2.png)
 
 
-### Task 6 Vectorize and persist embeddings in Azure Cognitive Search
+### Task 6: Vectorize and persist embeddings in Azure Cognitive Search
 
 1. Within LabVm double click on **Postman** to open which is presented on desktop.
 1. On **Create a free Postman account** provide email and click on **Create free account**.
@@ -278,7 +278,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
       }
     ```
 
-### Task 7 Explore the recommendation service
+### Task 7: Explore the recommendation service
 
 1. Get back to tab where **Miyagi** ui page displaying
 1. Click personalize button
