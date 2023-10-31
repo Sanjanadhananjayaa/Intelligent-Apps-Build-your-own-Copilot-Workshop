@@ -1,6 +1,8 @@
-# Intelligent-Apps-Build-your-own-Copilot-Workshop
+# Lab 1 - Run Miyagi Locally
 
-#### Task 1: Setup configuration for miyagi app
+In this lab, you'll setup and configure Miyagi app locally.
+
+### Task 1: Setup configuration for miyagi app
 
 1. Within the Labvm select Visual Studio Code which is presented on desktop, double click on it to open.
 
@@ -140,7 +142,7 @@
 
    ![](./Media/image-rg-24.png)
 
- #### Task 2: Setup .NET secrets
+ ### Task 2: Setup .NET secrets
 
 1. Navigate to miyagi/services/recommendation-service/dotnet, right click on dotnet and select **Open in intergate Terminal**.
 1. Run the following command to set the secrets for the recommendation service. You will need to provide the values for the variables below.
@@ -169,7 +171,7 @@
 
       ![](./Media/string.png)
 
-### 2.4 Understanding implementation of the recommendation service
+### Task 3 Understanding implementation of the recommendation service
 
 Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step by step details of how the Recommendation Service is implemented. Pay special attention to how RAG pattern is implemented using Semantic Kernel. Select kernel as .NET Interactive in the top right corner of the notebook.
 
@@ -180,7 +182,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
    ![](./Media/run.png)
    
-### 2.5 Run miyagi frontend locally
+### Task 4 Run miyagi frontend locally
 
 1. Open a new terminal: by navigating  miyagi/ui/typescript and right-click on **ui/typescript** , in cascading menu select **Open in intergate Terminal**.
 
@@ -205,7 +207,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
    ![](./Media/miyagi1.png)
    
-### 2.6 Run recommendation service locally
+### Task 5 Run recommendation service locally
 
 1. Open a new terminal: by navigating miyagi/services/recommendation-service/dotnet and right-click on in cascade select **Open in intergate Terminal**.
 
@@ -229,7 +231,8 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    ![](./Media/miyagi2.png)
 
 
-### 2.7 Vectorize and persist embeddings in Azure Cognitive Search
+### Task 6 Vectorize and persist embeddings in Azure Cognitive Search
+
 1. Within LabVm double click on **Postman** to open which is presented on desktop.
 1. On **Create a free Postman account** provide email and click on **Create free account**.
 1. On **Create Postman account** window, provide following information and click on **Create free account**.
@@ -288,7 +291,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
       }
     ```
 
-### 2.8 Explore the recommendation service
+### Task 7 Explore the recommendation service
 
 1. Get back to tab where **Miyagi** ui page displaying
 1. Click personalize button
@@ -300,10 +303,6 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    ![](./Media/post10.png)
 
 1. You should see the recommendations from the recommendation service in the Top Stocks widget.
-
-## 3. TODO: Deploy Apps to Azure Container Apps
-
-## 4. TODO: Expose Open AI through APIM
 
 
 
