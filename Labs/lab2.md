@@ -70,3 +70,11 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
     docker push miyagiacr[did].azurecr.io/miyagi-recommendation:latest
 
    ```
+
+1. Navigate back to **Azure portal**
+
+1. Select resource group miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> resource group page, select miyagiacr-<inject key="DeploymentID" enableCopy="false"/> from resources list.
+
+1. On miyagiacr-<inject key="DeploymentID" enableCopy="false"/> blade, **under** services select **Repositories**, notice miyagi-recommendation and miyagi-ui is present in Repositories.
+1. In search bar serach and select **Container instances** and select **+ Create**.
+1. 
