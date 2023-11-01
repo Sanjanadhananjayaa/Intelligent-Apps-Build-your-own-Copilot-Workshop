@@ -10,7 +10,7 @@ In this lab, you'll setup and configure Miyagi app locally.
 
    ![](./Media/image-rg-01.png)
    
-1. In Visual Studio Code from menu bar select **File(1)** **Open folder(2)**,
+1. In Visual Studio Code from menu bar select **File(1)** **Select folder(2)**,
 
    ![](./Media/image-rg-02.png)
 
