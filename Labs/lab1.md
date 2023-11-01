@@ -217,7 +217,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 ### Task 6: Vectorize and persist embeddings in Azure Cognitive Search
 
 1. Within LabVm double click on **Postman** to open which is presented on desktop.
-1. On **Create a free Postman account** provide email and click on **Create free account**.
+1. On **Create a free Postman account** provide email Odluser<inject key="DeploymentID" enableCopy="false"/>  and click on **Create free account**.
 1. On **Create Postman account** window, provide following information and click on **Create free account**.
 
    | **Settings**         | **Values**           | 
