@@ -21,7 +21,7 @@ In this lab, you'll setup and configure Miyagi app locally.
 1. In Visual Studio Code if **Do you trust the authors of the files in this folder?** window prompted click on **Yes, I trust the authors**.
    ![](./Media/image-rg-18.png)
    
-1. Expand **miyagi>ui/typescript** and verify **.env.** file is present
+1. Expand **miyagi>ui** and verify **.env.** file is present
 
 1. Expand **miyagi/services/recommendation-service/dotnet** and verify **appsettings.json** is present.
   
