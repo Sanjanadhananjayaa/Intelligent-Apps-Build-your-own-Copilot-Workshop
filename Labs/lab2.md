@@ -19,7 +19,7 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
    ```
 1. Run following command
    ```
-   docker run -t Miyagi-ui -p 8001:3000
+   docker run -t miyagi-ui -p 8001:3000
    ```
 1. Navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in intergate Terminal**
 1. Run following command to build a Docker image
@@ -34,4 +34,39 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 1. Run following command
    ```
    docker run -t miyagi-ui -p 8001:3000
+   ```
+1. Navigate to miyagi/ui/ right - click on ui/typescript in cascading menu, select **Open in intergate Terminal**.
+
+1. Run following command
+
+   **Note**: Please replace miyagi[did] with miyagi<inject key="DeploymentID" enableCopy="false"/>
+
+   ```
+    docker tag miyagi-ui:latest miyagiacr{did].azurecr.io/miyagi-ui:latest
+   ```
+1. Run the following command to push image to container registery
+
+   **Note**: Please replace miyagi[did] with miyagi<inject key="DeploymentID" enableCopy="false"/>
+
+   ```
+    docker push miyagiacr[did].azurecr.io/miyagi-ui:latest
+
+   ```
+
+1. Navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in intergate Terminal**
+
+1. Run following command
+
+   **Note**: Please replace miyagi[did] with miyagi<inject key="DeploymentID" enableCopy="false"/>
+
+   ```
+    docker tag miyagi-recommendation:latest miyagiacr{did].azurecr.io/miyagi-recommendation:latest
+   ```
+1. Run the following command to push image to container registery
+
+   **Note**: Please replace miyagi[did] with miyagi<inject key="DeploymentID" enableCopy="false"/>
+
+   ```
+    docker push miyagiacr[did].azurecr.io/miyagi-recommendation:latest
+
    ```
