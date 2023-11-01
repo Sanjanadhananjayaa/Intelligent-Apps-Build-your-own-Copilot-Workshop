@@ -104,7 +104,7 @@ In this lab, you'll setup and configure Miyagi app locally.
 
       >**Note**: Please record **URL** in notepad you need this values in further tasks.
       
-   1. Get back to visual studio and paste URL to Cosmos DB URI and for cosmosDbName replace cosmos-<inject key="DeploymentID" enableCopy="false"/>
+   1. Get back to visual studio and paste URL to **CosmosDBURI** and for **cosmosDbName** replace "miyagi** with cosmos-<inject key="DeploymentID" enableCopy="false"/>
 
         >**Note**: Please record **Name** values in notepad you need this values in further tasks.
 
